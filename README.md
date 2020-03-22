@@ -8,7 +8,7 @@ The app can generate a heuristic solution that maximizes sprinkler density while
 <br> 
 All of the sprinkler’s coverage is guaranteed to be in a scarecrow's range.
 
-To start, run the Sprinkler Optimizer.jar file. Enter the number of sprinklers you have and press generate.
+To start, run the <a href = "https://github.com/ac-tam/Stardew-Valley-Sprinkler-Placement-Optimizer/raw/master/Sprinkler%20Optimizer.jar">Sprinkler Optimizer.jar</a> file. Enter the number of sprinklers you have and press generate.
 <br> 
 A secondary window will open with the layout generated.
 
