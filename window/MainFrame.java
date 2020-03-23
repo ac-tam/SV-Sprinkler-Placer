@@ -22,52 +22,53 @@ public class MainFrame extends JFrame {
 			super("Stardew");
 			MainPanel myPanel = new MainPanel(farm);
 			
-			setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); 
+			//setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); 
 			
 			JScrollPane scr = new JScrollPane(myPanel);
 			scr.setPreferredSize(new Dimension(750, 750));
 			scr.getVerticalScrollBar().setUnitIncrement(100);
 			scr.getHorizontalScrollBar().setUnitIncrement(100);
-
+			scr.getVerticalScrollBar().setValue(48);
+			scr.getHorizontalScrollBar().setValue(48);
 			KeyAdapter key = new KeyAdapter() {
 				@Override
 				public void keyTyped(KeyEvent e) {
 					switch (e.getKeyChar()) {
 					case 'w':
-						scr.getVerticalScrollBar().setValue(scr.getVerticalScrollBar().getValue() - 200);
+						scr.getVerticalScrollBar().setValue(scr.getVerticalScrollBar().getValue() - 740);
 						System.out.println('w');
 						break; 
 					case 'd':
-						scr.getHorizontalScrollBar().setValue(scr.getHorizontalScrollBar().getValue() + 200);
+						scr.getHorizontalScrollBar().setValue(scr.getHorizontalScrollBar().getValue() + 740);
 						System.out.println('d');
 						break;
 					case 'c':
-						scr.getHorizontalScrollBar().setValue(scr.getHorizontalScrollBar().getValue() + 200);
-						scr.getVerticalScrollBar().setValue(scr.getVerticalScrollBar().getValue() + 200);
+						scr.getHorizontalScrollBar().setValue(scr.getHorizontalScrollBar().getValue() + 740);
+						scr.getVerticalScrollBar().setValue(scr.getVerticalScrollBar().getValue() + 740);
 						System.out.println('c');
 						break;
 					case 'q':
-						scr.getHorizontalScrollBar().setValue(scr.getHorizontalScrollBar().getValue() - 200);
-						scr.getVerticalScrollBar().setValue(scr.getVerticalScrollBar().getValue() - 200);
+						scr.getHorizontalScrollBar().setValue(scr.getHorizontalScrollBar().getValue() - 740);
+						scr.getVerticalScrollBar().setValue(scr.getVerticalScrollBar().getValue() - 740);
 						System.out.println('q');
 						break;
 					case 'e':
-						scr.getHorizontalScrollBar().setValue(scr.getHorizontalScrollBar().getValue() + 200);
-						scr.getVerticalScrollBar().setValue(scr.getVerticalScrollBar().getValue() - 200);
+						scr.getHorizontalScrollBar().setValue(scr.getHorizontalScrollBar().getValue() + 740);
+						scr.getVerticalScrollBar().setValue(scr.getVerticalScrollBar().getValue() - 740);
 						System.out.println('e');
 						break;
 					case 'z':
-						scr.getHorizontalScrollBar().setValue(scr.getHorizontalScrollBar().getValue() - 200);
-						scr.getVerticalScrollBar().setValue(scr.getVerticalScrollBar().getValue() + 200);
+						scr.getHorizontalScrollBar().setValue(scr.getHorizontalScrollBar().getValue() - 740);
+						scr.getVerticalScrollBar().setValue(scr.getVerticalScrollBar().getValue() + 740);
 						System.out.println('z');
 						break;
 					case 's':
-						scr.getVerticalScrollBar().setValue(scr.getVerticalScrollBar().getValue() + 200);
+						scr.getVerticalScrollBar().setValue(scr.getVerticalScrollBar().getValue() + 740);
 						System.out.println('s');
 
 						break;
 					case 'a':
-						scr.getHorizontalScrollBar().setValue(scr.getHorizontalScrollBar().getValue() - 200);
+						scr.getHorizontalScrollBar().setValue(scr.getHorizontalScrollBar().getValue() - 740);
 						System.out.println('a');
 
 						break;
@@ -78,14 +79,19 @@ public class MainFrame extends JFrame {
 					}
 				}
 			};
+			setMinimumSize(new Dimension(400,400));
+			setMaximumSize(new Dimension(1000,1000));
+
 			addKeyListener(key);
 			add(scr);
-			setBounds(700, 100 , 700, 750);
+			setBounds(700, 100, 816, 816);
 			setVisible(true);
 	}
 
 	public static void main(String[] args) {
 		new MainFrame();
+		String abc = "asd";
+		System.out.println($`Hello {abc}`);
 		
 	}
 }

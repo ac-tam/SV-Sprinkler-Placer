@@ -136,6 +136,7 @@ public class MainPanel extends JPanel{
 				}
 	}
 	JSpinner iridiumIO, qualityIO, normalIO;
+	
 	public MainPanel() {
 		setLayout(null);
 		
@@ -146,16 +147,17 @@ public class MainPanel extends JPanel{
 		generate.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Farm river = new Farm(29, 29);
+				Farm river = new Farm(35, 35);
 				int[] a;		
 				int iridium, quality, normal;
 				iridium = (int) iridiumIO.getValue();
 				quality = (int) qualityIO.getValue();
 				normal =  (int) normalIO.getValue();
-				river.scarecrow(false, 7, 7);				
-				river.scarecrow(false, 21, 7);
-				river.scarecrow(false, 7, 21);
-				river.scarecrow(false, 21, 21);
+				river.scarecrow(false, 9, 9);		
+				river.scarecrow(false, 26, 9);	
+				river.scarecrow(false, 9, 26);	
+				river.scarecrow(false, 26, 26);	
+
 
 				for (int j = 1; j < iridium + 1; j++) {
 					a = river.lookForIridiumSprinkler();
